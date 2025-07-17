@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --color-primary-black: #000000;
+  --color-pure-white: #FFFFFF;
+  --color-accent-blue: #005288;
+  --color-gray: #808080;
+
+  --font-primary: 'Roboto', Arial, sans-serif;
+
+  --text-hero-headline: 48px;
+  --text-section-header: 32px;
+  --text-navigation: 14px;
+  --text-body: 16px;
+  --text-button: 14px;
+
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+
+  --radius-none: 0px;
+
+  --shadow-none: none;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  html,
+  body {
+    background-color: var(--color-primary-black);
+    color: var(--color-pure-white);
+    font-family: var(--font-primary);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+    font-weight: var(--font-weight-bold);
+  }
+
+  h1 {
+    font-size: var(--text-hero-headline);
+  }
+
+  h2 {
+    font-size: var(--text-section-header);
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  /* Responsive Headings */
+  @screen md {
+    h1 {
+      font-size: 72px;
+    }
+    h2 {
+      font-size: 48px;
+    }
+  }
+
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
